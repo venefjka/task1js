@@ -19,6 +19,17 @@ function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function checkAnswer(userAnswer, correctAnswer, name) {
+  if (userAnswer === correctAnswer) {
+    console.log("Correct!");
+  } else {
+    console.log(
+      `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
+    );
+    console.log(`Let's try again, ${name}!`);
+  }
+}
+
 function playLcmGame() {
   console.log("Welcome to the Brain Games!");
   const name = readlineSync.question("May I have your name? ");
@@ -35,13 +46,7 @@ function playLcmGame() {
     console.log(`Question: ${num1} ${num2} ${num3}`);
     const userAnswer = Number(readlineSync.question("Your answer: "));
 
-    if (userAnswer === correctAnswer) {
-      console.log("Correct!");
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${name}!`);
-      return;
-    }
+    checkAnswer(userAnswer, correctAnswer, name);
   }
   console.log(`Congratulations, ${name}!`);
 }
@@ -76,13 +81,7 @@ function playGeometricProgressionGame() {
     console.log(`Question: ${progression.join(" ")}`);
     const userAnswer = Number(readlineSync.question("Your answer: "));
 
-    if (userAnswer === correctAnswer) {
-      console.log("Correct!");
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${name}!`);
-      return;
-    }
+    checkAnswer(userAnswer, correctAnswer, name);
   }
   console.log(`Congratulations, ${name}!`);
 }
