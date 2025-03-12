@@ -1,0 +1,27 @@
+# Node.js зависимости
+node_modules/
+package-lock.json
+
+# Логи и временные файлы
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.DS_Store
+Thumbs.db
+
+# Конфигурации окружения
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE / Редактор
+.vscode/
+.idea/
+*.iml
+
+# Кэш ESLint и Prettier
+.eslintcache
+.prettierignore

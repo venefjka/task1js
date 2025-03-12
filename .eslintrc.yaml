@@ -1,0 +1,20 @@
+root: true
+env:
+  browser: true
+  es2021: true
+  node: true
+
+extends:
+  - eslint:recommended
+
+parserOptions:
+  ecmaVersion: 2021  # или 6, 2018, 2020 в зависимости от требований
+  sourceType: module
+
+rules:
+  semi: ["error", "always"] # Требовать точку с запятой
+  quotes: ["error", "double"] # Двойные кавычки
+  indent: ["error", 2] # Отступ 2 пробела
+  no-console: "off" # Разрешить console.log
+  no-unused-vars: "warn" # Предупреждать об неиспользуемых переменных
+  import/extensions: "off"  # Отключает требование указывать расширения в import
