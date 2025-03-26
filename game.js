@@ -1,3 +1,5 @@
+// КОД ДО РЕФАКТОРИНГА
+
 const readlineSync = require("readline-sync");
 
 // НОД
