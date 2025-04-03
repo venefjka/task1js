@@ -12,5 +12,5 @@
 ```sh
 git clone
 npm install
-node game.js
+node main.js
 ```
